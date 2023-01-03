@@ -6,7 +6,9 @@ import chalk from "chalk";
 import routes from "./routes/index.js";
 
 const app = express();
-const PORT = 3000;
+const port = process.env.PORT || 3000
+
+app.listen(port, () => console.log(`app listening on port ${port}`))
 
 app.use(express.json());
 app.use(cors());
