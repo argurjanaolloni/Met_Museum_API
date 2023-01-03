@@ -1,4 +1,3 @@
-import { json } from "express";
 import Museum from "../models/Museum.js"
 
 export const getArtworks = async (req, res) => {

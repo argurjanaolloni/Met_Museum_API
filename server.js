@@ -8,8 +8,6 @@ import routes from "./routes/index.js";
 const app = express();
 const port = process.env.PORT || 3000
 
-app.listen(port, () => console.log(`app listening on port ${port}`))
-
 app.use(express.json());
 app.use(cors());
 app.use(logger("dev"));
@@ -19,9 +17,9 @@ app.use("/", routes);
 db.on("connected", () => {
   console.clear();
   console.log(chalk.white("Connected to MongoDB!"));
-  app.listen(PORT, () => {
+  app.listen(port, () => {
     console.log(
-      `Express server is running in development on http://localhost:${PORT}`
+      `Express server is running in development on http://localhost:${port}`
     );
   });
 });
