@@ -11,8 +11,8 @@ import { promises as fsPromises } from 'fs'
 async function createArtwork() {
 
   let ourArtwork = []
-
-  for (let i = 1; i < 31; i++) {
+  //edit
+  for (let i = 11576; i < 11601; i++) {
       ourArtwork.push(
           await fetch(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${i}`)
           .then(item => item.json())  

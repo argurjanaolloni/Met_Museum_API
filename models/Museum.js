@@ -6,6 +6,7 @@ let Museum = new Schema({
   isHighlight: { type: Boolean },
   accessionNumber: { type: String },
   isPublicDomain: { type: Boolean },
+  primaryImage: {type: String},
   department: { type: String },
   objectName:  { type: String },
   title:  { type: String },
